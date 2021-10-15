@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/todos']">To Do</a></li>
+        <li><a [routerLink]="['/contacto']">Contacto</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+        <li><a [routerLink]="['/logout']"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>To Do App</h1>
+  </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="./assets/img/Todo-list.jpg" class="To-do" alt="Image">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  CLick here to get a customized welcome message
+  <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">Get Welcome</button>
+</div>
+<div class="container" *ngIf="welcomeMessageFromService">
+  <h2>Your Customized Welcome Message</h2>
+  {{welcomeMessageFromService}}
+</div>
